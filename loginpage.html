@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Login page</title>
+</head>
+<body>
+<h1>Login Page</h1>
+<form>
+<p>Username <input type="text" name="userid"/></p>
+<p>Password <input type="password" name="pswrd"/></p>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+<p id="san"></p>
+<script language="javascript">
+function check(form)
+{
+
+ if(form.userid.value == "user1" && form.pswrd.value == "userpass")
+  {
+var txt = '{"Address":"Link road London", "age":45, "personality":"Rocking"}'
+
+var obj = JSON.parse(txt);
+
+document.getElementById("san").innerHTML = obj.Address + ", " + obj.age + ", " + obj.personality;
+	  
+    //window.open('user_details.html')
+  }
+ else
+ {
+   alert("Wrong Password or Username")
+  }
+
+}
+
+
+</script>
+</body>
+</html>
